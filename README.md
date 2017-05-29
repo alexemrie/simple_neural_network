@@ -10,7 +10,7 @@ This is the code for [this](https://youtu.be/p69khggr1Jo) video by Siraj Raval o
 None! Just numpy.
 
 ## Data matrix
-![https://cdn-images-1.medium.com/max/800/1*nEooKljI8XbKQh4cFbZu1Q.png]()
+![](https://cdn-images-1.medium.com/max/800/1*nEooKljI8XbKQh4cFbZu1Q.png)
 You might have noticed, that the output is always equal to the value of the leftmost input column. Therefore the answer is the ‘?’ should be 1.
 
 ## How to solve
@@ -21,26 +21,26 @@ You might have noticed, that the output is always equal to the value of the left
 * Depending on the direction of the error, adjust the weights slightly. Repeat.
 * Eventually the weights of the neuron will reach an optimum for the training set.
 
-![https://cdn-images-1.medium.com/max/400/1*-1trgA6DUEaafJZv3k0mGw.jpeg]() Principle of backpropagation.
+![](https://cdn-images-1.medium.com/max/400/1*-1trgA6DUEaafJZv3k0mGw.jpeg) Principle of backpropagation.
 
 # How to calculate neuron's output
 * First we take the weighted sum of the neuron’s inputs, which is:
-![https://cdn-images-1.medium.com/max/800/1*RV7-CFkmmByfcXKkPcbAYQ.png]()
+![](https://cdn-images-1.medium.com/max/800/1*RV7-CFkmmByfcXKkPcbAYQ.png)
 * Normalize - so result is between 0 and 1. Use Sigmoid function.
-![https://cdn-images-1.medium.com/max/800/1*5il5GLo0gamypklQQ_z0AA.png]()
-![https://cdn-images-1.medium.com/max/800/1*sK6hjHszCwTE8GqtKNe1Yg.png]()
+![](https://cdn-images-1.medium.com/max/800/1*5il5GLo0gamypklQQ_z0AA.png)
+![](https://cdn-images-1.medium.com/max/800/1*sK6hjHszCwTE8GqtKNe1Yg.png)
 * Substitute weighted sum function into Sigmoid function
-![https://cdn-images-1.medium.com/max/800/1*7YdyG6fc6f6zMmx3l0ZGsQ.png]()
+![](https://cdn-images-1.medium.com/max/800/1*7YdyG6fc6f6zMmx3l0ZGsQ.png)
 
 # How to dynamically adjust weights
 * We adjust the weights. But how much do we adjust the weights by? Using Error weighted derivatives...
-![https://cdn-images-1.medium.com/max/800/1*SQBjpbBcCT3lTQlPEdr1eg.png]()
+![](https://cdn-images-1.medium.com/max/800/1*SQBjpbBcCT3lTQlPEdr1eg.png)
 * Why this formula? First we want to make the adjustment proportional to the size of the error.
 * We used the Sigmoid curve to calculate the output of the neuron. Therefore, if the output is a large positive or negative number, it signifies the neuron was quite confident one way or another. We can see that at large numbers, the Sigmoid curve has a shallow gradient. If the neuron is confident that the existing weight is correct, it doesn’t want to adjust it very much.
 * The gradient of the Sigmoid curve, can be found by taking the derivative: (Slope)
-![https://cdn-images-1.medium.com/max/800/1*HdHm9u3_wjwBPmwuLg3D3g.png]()
+![](https://cdn-images-1.medium.com/max/800/1*HdHm9u3_wjwBPmwuLg3D3g.png)
 * So by substituting the second equation into the first equation, the final formula for adjusting the weights is:
-![https://cdn-images-1.medium.com/max/800/1*Jow4WVWNOp6rtiJ7vNQ0gQ.png]()
+![](https://cdn-images-1.medium.com/max/800/1*Jow4WVWNOp6rtiJ7vNQ0gQ.png)
 
 
 ##Usage
@@ -57,7 +57,7 @@ The challenge for this video is to create a 3 layer feedforward neural network u
 
 The credits for this code go to [Milo Harper](https://github.com/miloharper). I've merely created a wrapper to get people started.
 
-##Additional Resources
+## Additional Resources
 More learning resources:
 * [https://i.stack.imgur.com/eBPgU.png](https://cogsci.stackexchange.com/questions/7880/what-is-the-difference-between-biological-and-artificial-neural-networks)
 * https://medium.com/technology-invention-and-more/how-to-build-a-simple-neural-network-in-9-lines-of-python-code-cc8f23647ca1#.fn92gnrar
