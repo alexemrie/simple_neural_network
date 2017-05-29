@@ -51,14 +51,19 @@ class NeuralNetwork():
 
 if __name__ == "__main__":
 
-    #Intialise a single neuron neural network.
+    #Intialize a single neuron neural network as an instance of a class.
     neural_network = NeuralNetwork()
 
+    #Print initial synaptic_weights which is a property on an instance of the NeuralNetwork class.
     print "Random starting synaptic weights: "
     print neural_network.synaptic_weights
 
     # The training set. We have 4 examples, each consisting of 3 input values
     # and 1 output value.
+
+    # .T function transposes matrix from horizontal to vertical such that input arrays
+    # map to a single number in the output. [0,0,1] => 0, [1,1,1] => 1
+
     training_set_inputs = array([[0, 0, 1], [1, 1, 1], [1, 0, 1], [0, 1, 1]])
     training_set_outputs = array([[0, 1, 1, 0]]).T
 
